@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(55, 55, 66);
+  color: white;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 200px;
+}
+
+.accordion-container > * {
+  width: 400px;
+}
+
+.button {
+  border: 1px solid white;
+  background-color: black;
+  min-height: 50px;
+  color: white;
+}
+
+.description {
+  background-color: black;
+  border: 1px solid white;
+  overflow: hidden;
+  transition: ease-out 2s;
+}
+
+.button + .description {
+  max-height: 0;
+  transition: ease-out 0.3s;
+}
+
+.button.is-open + .description {
+  max-height: 500px;
+  transition: ease-out 2s;
+}
